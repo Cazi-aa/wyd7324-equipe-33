@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projeto da disciplina ARA0062 — Equipe Delta.">
-    <title>Escola Delta de Idiomas — Equipe Delta</title>
+    <meta name="description" content="Projeto da disciplina WYD7324 — Equipe 33.">
+    <title>Informativo F1 - Equipe 33</title>
 
     <!--
       O CSS ainda está vazio: ele começa a ser escrito na aula 04.
@@ -16,8 +16,8 @@
   <body>
 
     <header>
-      <h1>Escola Delta de Idiomas</h1>
-      <p>Projeto da equipe Delta — ARA0062</p>
+      <h1>Informativo F1</h1>
+      <p>Projeto da equipe 33 — WYD7324</p>
     </header>
 
     <nav>
@@ -31,16 +31,77 @@
       <section id="sobre">
         <h2>Sobre o projeto</h2>
         <p>
-          Troque este conteúdo pelo do projeto de vocês. O que não muda é a
-          estrutura: este arquivo é a raiz do <code>frontend/</code>, com
+          Este projeto é um site informativo sobre Fórmula 1, feito como trabalho da disciplina WYD7324.
+          A estrutura do projeto: este arquivo é a raiz do <code>frontend/</code>, com
           <code>css/</code>, <code>js/</code> e <code>img/</code> ao lado dele.
           Todo PHP mora no <code>backend/</code>, um nível acima.
         </p>
+        <ul>Objetivos do projeto:
+          <li>Desenvolver um site com informações úteis sobre Fórmula 1</li>
+          <li>Disponibilizar jogos interativos e informativos de forma gratuita</li>
+          <li>Permitir envio de emails com feedbacks, sugestões e dúvidas</li>
+        </ul>
+        <h2>A Equipe 33</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Papel</th>
+            </tr>
+            <tr>
+              <td>Cauã Zarattini Almeida</td>
+              <td><strong>Líder</strong></td>
+            </tr>
+            <tr>
+              <td>Estevão Henrique Correa Da Silva</td>
+              <td>Integrante</td>
+            </tr>
+            <tr>
+              <td>Filipe Gabriel Carneiro Hott</td>
+              <td>Integrante</td>
+            </tr>
+            <tr>
+              <td>Juan Vazquez Nascimento Silva</td>
+              <td>Integrante</td>
+            </tr>
+            <tr>
+              <td>Rafael Pires Rezende</td>
+              <td>Integrante</td>
+            </tr>
+            <tr>
+              <td>Victor Henrique Rocha de Oliveira</td>
+              <td>Integrante</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section id="contato">
-        <h2>Contato</h2>
-        <p>O formulário de contato entra aqui.</p>
+        <h2>Fale Conosco</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Seus dados</legend>
+            <div>
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto">
+                <option value="" disabled selected hidden>Escolher</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="duvida">Dúvida</option>
+                <option value="elogio">Elogio</option>
+              </select>
+            </div>
+            
+          </fieldset>
+          <button type="submit">Enviar</button>
+        </form>
 
         <!--
           No ciclo 8, o action deste formulário aponta para o backend:
@@ -52,7 +113,7 @@
     </main>
 
     <footer>
-      <p>Equipe Delta &middot; 2026 &middot; ARA0062 &middot; Newton Paiva</p>
+      <p>Equipe 33 &middot; 2026 &middot; WYD7234 &middot; Newton Paiva</p>
     </footer>
 
     <!--
