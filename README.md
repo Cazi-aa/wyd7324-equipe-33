@@ -21,7 +21,7 @@ NO TRABALHO, PEÇO QUE AO FINALIZAR O SEU COMMIT AVISEM NO GRUPO
 |---|---|---|---|
 | Cauã Zarattini Almeida | 202603039102 | @Cazi-aa | **líder** |
 | estevão henrique correa da silva | 202602763028 | @estevoa | integrante |
-| Filipe Gabriel Carneiro Hott | 202602623242 | Filipehott | integrante  |
+| Filipe Gabriel Carneiro Hott | 202602623242 | @Filipehott | integrante  |
 | Juan Vazquez Nascimento Silva | 202603675394 | @JuanVazquezRoscoe | integrante |
 | Rafael Pires Rezende | 202603137881 | @rPiresr | integrante  |
 |-SEU NOME COMPLETO VAI AQUI: VICTOR-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
