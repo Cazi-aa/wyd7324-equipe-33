@@ -20,7 +20,7 @@ NO TRABALHO, PEÇO QUE AO FINALIZAR O SEU COMMIT AVISEM NO GRUPO
 | Nome completo | Matrícula | GitHub | Papel |
 |---|---|---|---|
 | Cauã Zarattini Almeida | 202603039102 | @Cazi-aa | **líder** |
-|-SEU NOME COMPLETO VAI AQUI: ESTEVÃO-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
+| estevão henrique correa da silva | 202602763028 | @estevoa | integrante |
 |-SEU NOME COMPLETO VAI AQUI: FILIPE-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
 |-SEU NOME COMPLETO VAI AQUI: JUNA-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
 |-SEU NOME COMPLETO VAI AQUI: RAFAEL-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
