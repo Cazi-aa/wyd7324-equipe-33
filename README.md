@@ -24,7 +24,7 @@ NO TRABALHO, PEÇO QUE AO FINALIZAR O SEU COMMIT AVISEM NO GRUPO
 | Filipe Gabriel Carneiro Hott | 202602623242 | @Filipehott | integrante  |
 | Juan Vazquez Nascimento Silva | 202603675394 | @JuanVazquezRoscoe | integrante |
 | Rafael Pires Rezende | 202603137881 | @rPiresr | integrante  |
-|-SEU NOME COMPLETO VAI AQUI: VICTOR-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
+| Victor Henrique Rocha de Oliveira | 202604060717 | @victorrc-0 | integrante  |
 
 ## Estrutura do projeto
 
