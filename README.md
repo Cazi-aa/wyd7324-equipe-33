@@ -23,7 +23,7 @@ NO TRABALHO, PEÇO QUE AO FINALIZAR O SEU COMMIT AVISEM NO GRUPO
 | estevão henrique correa da silva | 202602763028 | @estevoa | integrante |
 |-SEU NOME COMPLETO VAI AQUI: FILIPE-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
 | Juan Vazquez Nascimento Silva | 202603675394 | @JuanVazquezRoscoe | integrante |
-|-SEU NOME COMPLETO VAI AQUI: RAFAEL-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
+| Rafael Pires Rezende | 202603137881 | @rPiresr | integrante  |
 |-SEU NOME COMPLETO VAI AQUI: VICTOR-| -SUA MATRÍCULA VAI AQUI- | -SEU GIT VAI AQUI- | integrante  |
 
 ## Estrutura do projeto
