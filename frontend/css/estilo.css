@@ -1,6 +1,88 @@
-/* ==========================================================================
-   ARA0062 — folha de estilos do projeto
-   Este arquivo começa vazio de propósito: o CSS entra a partir da aula 04.
-   Ele já está ligado ao index.html pela linha
-   <link rel="stylesheet" href="css/estilo.css">
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   1. O :ROOT E VARIÁVEIS DE COR — Paleta Performance Green
+   -------------------------------------------------------------------------- */
+:root {
+  /* Cinco papéis obrigatórios do PDF */
+  --principal: #0B3D2E;          /* Racing Green */
+  --sobre-principal: #F5F5F5;    /* Texto claro sobre a cor principal */
+  --fundo: #0B0D0E;              /* Carbon Black */
+  --superficie: #171A1C;         /* Graphite */
+  --texto: #F5F5F5;              /* White */
+
+  /* Cores de apoio e detalhes */
+  --realce: #39FF14;             /* Electric Green */
+  --texto-fraco: #D9DDE0;        /* Silver */
+  --linha: #242424;              /* Linhas de divisão */
+
+  /* Escala de espaçamento em rem (Exigência do PDF) */
+  --e-1: 0.5rem;   /*espasamento entre as linhas 8px */
+  --e-2: 1rem;     /*espacamento do entorno das frases  16px */
+  --e-3: 1.5rem;   /*tamanho do conteiner superior 24px */
+  --e-4: 1.5rem;   /*espacamento do todo em comparação ao resto da pagina 40px */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   6. FORMULÁRIO E RODAPÉ — Estevão Henrique Correa da Silva
+   -------------------------------------------------------------------------- */
+.f1-footer {
+  background-color: var(--superficie);
+  color: var(--texto);
+  border-top: 3px solid var(--realce); /* Linha de destaque no topo do rodapé(fininha verde da parte de cima) */
+  padding-top: var(--e-3);
+  margin-top: var(--e-4);
+  width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+}
+/* mantém o conteúdo do rodapé centralizado, e com as listas separadas, toda nova lista entra com essas regras */
+.f1-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--e-2) var(--e-3) var(--e-2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--e-3);
+}
+
+.f1-footer-block {
+  flex: 1 1 250px; /* Permite o rodape se adequar a qualquer tamanho de tela */
+}
+/* define o estilo para os títulos dentro de cada bloco do rodapé, como o nome  do site*/
+.f1-footer-block h3,
+.f1-footer-block h4 {
+  color: var(--texto);
+  margin-bottom: var(--e-1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* define o estilo para os parágrafos dentro de cada bloco do rodapé */
+.f1-footer-block p { 
+  color: var(--texto-fraco);
+  font-size: 0.9rem;
+  line-height: 1.0;
+  margin-bottom: var(--e-1);
+}
+/* define o estilo para as listas dentro de cada bloco do rodapé, os nomes por exemplo */
+.f1-footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* define o estilo para os itens de lista dentro de cada bloco do rodapé */
+.f1-footer-block li {
+  color: var(--texto-fraco);
+  font-size: 0.9rem;
+  margin-bottom: var(--e-1);
+}
+/* define o estilo para a parte inferior do rodapé, os direitos autorais */
+.f1-footer-bottom {
+  background-color: var(--fundo);
+  text-align: center;
+  padding: var(--e-2);
+  border-top: 1px solid var(--linha);
+  font-size: 0.8rem;
+  color: var(--texto-fraco);
+}
