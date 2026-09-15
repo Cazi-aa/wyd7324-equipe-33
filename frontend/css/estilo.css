@@ -1,7 +1,8 @@
 /* --------------------------------------------------------------------------
-   1. O :ROOT E VARIÁVEIS DE COR — Paleta Performance Green
+   1. O ROOT: (fontes e paleta de cores) — Cauã Zarattini e Estevão Henrique
    -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+   
+
 :root {
   /* Cinco papéis obrigatórios do PDF */
   --principal: #0B3D2E;          /* Racing Green */
@@ -9,6 +10,7 @@
   --fundo: #0B0D0E;              /* Carbon Black */
   --superficie: #171A1C;         /* Graphite */
   --texto: #F5F5F5;              /* White */
+  --hover-superficie: #23282b;
 
   /* Cores de apoio e detalhes */
   --realce: #39FF14;             /* Electric Green */
@@ -17,8 +19,8 @@
   --cor_link: #4bdf31;            /* Verde mais suave que --realce para links */
 
    /*Fontes*/
-   --fonte-principal: 'Montserrat', sans-serif;
-   --fonte-secundaria: 'Arial', sans-serif;
+   --fonte-principal: 'Montserrat', sans-serif;  /*Fonte principal, títulos, subtítulos e parágrafos*/
+   --fonte-secundaria: 'Arial', sans-serif;      /*Fonte secundária, inputs*/
 
   /* Escala de espaçamento em rem (Exigência do PDF) */
   --esp-entre-linhas: 0.5rem;   /*espasamento entre as linhas 8px */
@@ -31,14 +33,20 @@
   box-sizing: border-box;
 }
 
+/*Estilização do corpo da página e definições globais*/
 body {
    background-color: var(--fundo);
    color: var(--texto);
-   font-family: var(--fonte-principal);
+   font-family: var(--fonte-principal); font-size: 1rem; line-height: 1.6;
    margin: 0;
    padding: 0;
 }
 
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+/*Estilização e espaçamento do cabeçalho*/
 header {
    background-color: var(--principal);
    color: var(--sobre-principal);
@@ -47,23 +55,23 @@ header {
    margin-bottom: 30px;
 }
 
+/*Define estilo e cor as tags de ancora "<a>"*/
 a {
    color: var(--cor_link);
    text-decoration: none;
 }
 
+/*Estilização e espaçamento da tabela*/
 table {
    border-collapse: collapse;
    width: 60%;
    margin: 20px auto 20px auto;
 }
-
 th, td {
    border: 1px solid var(--linha);
    padding: 10px 14px;
    text-align: left;
 }
-
 thead th {
    background-color: var(--superficie);
    color: var(--texto);
@@ -73,33 +81,62 @@ tbody tr:nth-child(even) {
    background-color: var(--principal);
 }
 
-.div-form {
-   margin: 0 11px;
+/*Organização das Divs do formulário e informações de contato*/
+.div-form-container {
+   display: flex;
+   gap: 10px;
+   margin: 20px;
+}
+.div-form-content {
+   margin: 0 7px;
+   padding: 3px 0;
+}
+.div-form-box1 {
+   width: 30%;
+   min-width: 0;
+}
+.contact-container {
+   display: flex;
+   gap: 10px;
+}
+.contact-container > div {
+   flex: 1;
+   min-width: 0;
+   overflow-wrap: break-word;
+}
+.div-form-box2 {
+   width: 70%;
+   min-width: 0;
 }
 
+/*Espaçamento do formulário*/
 form{
-   width: 60%;
+   width: 100%; 
    margin: 20px auto 20px auto;
 }
 
+/*Estilização do field set no formulário*/
 fieldset {
    border: 1px solid var(--linha);
    border-radius: 6px;
    padding: 18px 20px 6px;
 }
 
+/*Define o estilo padrão para labels*/
 label {
-   padding: 5px 0;
+   padding: 3px 0 3px;
    display: block;
    font-weight: bold;
 }
 
+/*Estilização do texto de descrição do formulário*/
 legend {
    font-weight: bold;
    padding:0 10px;
    color: var(--texto);
 }
 
+/*Realiza a estilização dos inputs(em específico type:text e email)*/
 input[type="text"],
 input[type="email"],
 textarea {
@@ -110,7 +147,6 @@ textarea {
    color: var(--texto);
    border: 1px solid var(--linha);
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
@@ -118,6 +154,7 @@ textarea:focus {
     border: 2px solid var(--realce);
 }
 
+/*Realiza a estilização do select, junto do efeito de foco quando o mouse está sobre ele e borda com realce quando selecionado */
 select {
    width: 15%;
    padding: 10px 10px;
@@ -126,11 +163,23 @@ select {
    background-color: var(--superficie);
    color: var(--texto);
    border: 1px solid var(--linha);
+   border-radius: 5px;
+}
+select:focus {
+   outline: none;
+   border: 2px solid var(--realce);
+}
+select:hover {
+   background-color: var(--hover-superficie);
+}
+select option:hover {
+   background-color: var(--hover-superficie);
 }
 
+/*Realiza a estilização do botão, junto do efeito de foco quando o mouse está sobre ele*/
 button {
    cursor: pointer;
-   background-color: var(--apoio);
+   background-color: var(--superficie);
    border: 1px solid var(--realce);
    font-family: var(--fonte-principal);
    font-weight: bold;
@@ -140,6 +189,12 @@ button {
    height: 40px;
    margin: 10px;
 }
+button:hover {
+   background-color: var(--hover-superficie);
+}
+/* --------------------------------------------------------------------------
+   6. O ROOT: (fontes e paleta de cores) — Cauã Zarattini e Estevão Henrique - Fim do Commit
+   -------------------------------------------------------------------------- */
 
 /*---------------------------------------------------------------------------
    PARAGRAFO DE IMPACTO NO INICIO - Rafael Pires Rezende
@@ -214,3 +269,6 @@ button {
   font-size: 0.8rem;
   color: var(--texto-fraco);
 }
+/* --------------------------------------------------------------------------
+   6. FORMULÁRIO E RODAPÉ — Estevão Henrique Correa da Silva - Fim do Commit
+   -------------------------------------------------------------------------- */
