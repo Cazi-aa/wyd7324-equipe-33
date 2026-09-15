@@ -1,78 +1,108 @@
-# Equipe 33 - Car Showroom #33
-Repositório da Equipe 33 da disciplina Desenvolvimento em HTML, liderada por Cauã Zarattini Almeida.
-Projeto da disciplina WYD7324 · Desenvolvimento Web em HTML5, CSS, JavaScript
-e PHP — Centro Universitário Newton Paiva, 2026/2.
+# Car Showroom #33
 
-## Tema do projeto
+**Assunto:** Site de compra de carros de médio/alto padrão
+**Equipe:** Cauã Zarattini · Estevão Henrique · Filipe Gabriel · Juan Vazquez · Rafael Pires · Victor Henrique
+**Disciplina:** WYD7324 — Desenvolvimento Web em HTML5, CSS, JavaScript e PHP
+**Centro Universitário Newton Paiva · 2026/2**
 
-Car Showroom #33: carros de médio/alto padrão, com especificações técnicas, curiosidades, tabela FIPE comparativa e formulário de contato para venda ou compra de carros.
-Feito pensando em ofecerer praticidade e agilidade na hora de comprar ou vender um carro.
+---
 
-## Equipe
+## Sobre o projeto
 
-**Líder:** Cauã Zarattini Almeida
+O Car Showroom #33 é um site focado em venda de carros de médio/alto padrão com
+opção de contato para venda de carros, onde o cliente vê a imagem do carro e suas
+especificações técnicas e preço de tabela.
 
-| Nome completo | Matrícula | GitHub | Papel |
-|---|---|---|---|
-| Cauã Zarattini Almeida | 202603039102 | @Cazi-aa | **líder** |
-| estevão henrique correa da silva | 202602763028 | @estevoa | integrante |
-| Filipe Gabriel Carneiro Hott | 202602623242 | @Filipehott | integrante  |
-| Juan Vazquez Nascimento Silva | 202603675394 | @JuanVazquezRoscoe | integrante |
-| Rafael Pires Rezende | 202603137881 | @rPiresr | integrante  |
-| Victor Henrique Rocha de Oliveira | 202604060717 | @victorrc-0 | integrante  |
+O site irá possuir uma roleta com imagens dos principais produtos a venda,
+formulário de contato para venda ou compra de carros, página de estoque com
+exibição em card.
 
-## Estrutura do projeto
+---
 
-Estrutura obrigatória da disciplina. Não renomeie pastas nem arquivos.
+## Identidade visual
 
-O projeto é separado em duas metades: **`frontend/`** guarda o que roda no
-navegador (HTML, CSS, JavaScript e imagens) e **`backend/`** guarda o que roda
-no servidor (PHP).
+*Estas são as decisões que o `frontend/css/estilo.css` aplica. Elas estão aqui
+para quem lê o repositório entender **por que** o site tem essa cara — e para
+a equipe não mudar de ideia a cada aula.*
+
+### Paleta
+
+| Papel | Cor | Por que esta |
+|---|---|---|
+| `--principal` | `#121212` | <onde aparece, e o que ela comunica sobre o assunto> |
+| `--sobre-principal` | `#D9DDE0` | Traz o contraste certo para a cor principal |
+| `--apoio` | `#39FF14` | Forte verde, remete velocidade |
+| `--fundo` | `#0B0D0E` | Fundo escuro para constraste |
+| `--superficie` | `#171A1C` | Mais claro para diferenciar fundo de card |
+| `--texto` | `#F5F5F5` | Fácil leitura em tema escuro |
+
+**Contraste conferido** em <https://webaim.org/resources/contrastchecker/>:
+
+```
+--texto sobre --superficie ......... __,_:1
+--principal sobre --superficie ..... __,_:1
+--sobre-principal sobre --principal  __,_:1
+```
+
+*Todos precisam ficar em 4,5:1 ou acima.*
+
+### Tipografia
+
+**Fonte:** Monsterrat, com plano B `<fonte de sistema>, sans-serif`
+**Pesos:** 400 e <600 ou 700>
+**Por que esta:** <uma frase ligando a fonte ao assunto>
+
+**Escala:** `h1` 2.5rem · `h2` 1.75rem · `h3` 1.25rem · corpo 1rem
+
+### Segundo tema
+
+**Arquivo:** `frontend/css/tema-<nome>.css`
+**O que é:** <em que situação este tema seria usado — modo escuro, uma data
+comemorativa, uma campanha>
+
+Para ligá-lo, tire o comentário da linha do `<link>` no `frontend/index.html`.
+Ela vem **depois** do `estilo.css`.
+
+---
+
+## Como abrir
+
+1. Abra **a pasta inteira** no VS Code (*Arquivo → Abrir Pasta*).
+2. Abra `frontend/index.html` e clique em **Go Live** (extensão *Live Server*).
+
+---
+
+## Estrutura
 
 ```
 .
-├─ README.md               este arquivo
-├─ frontend/               tudo o que roda no navegador
-│   ├─ index.html          a página principal
+├─ README.md                 esta folha de rosto
+├─ frontend/                 tudo o que roda no navegador
+│   ├─ index.html
 │   ├─ css/
-│   │   └─ estilo.css      estilos do site (a partir da aula 04)
+│   │   ├─ estilo.css        a folha do projeto
+│   │   └─ tema-<nome>.css   o segundo tema: só variáveis
 │   ├─ js/
-│   │   └─ script.js       comportamento da página (a partir do ciclo 6)
+│   │   └─ script.js         vazio até o ciclo 6
 │   └─ img/
-│       └─ .gitkeep        arquivo vazio que segura a pasta no Git
-└─ backend/                tudo o que roda no servidor
+└─ backend/                  tudo o que roda no servidor
     ├─ config/
-    │   └─ conexao.php     conexão com o banco (a partir do ciclo 8)
-    └─ processa-contato.php  recebe o formulário (a partir do ciclo 8)
+    │   └─ conexao.php       vazio até o ciclo 8
+    └─ processa-contato.php
 ```
 
-Os dois arquivos `.php` começam vazios, só com um comentário dentro. Eles
-existem desde já para que o lugar do código de servidor esteja combinado quando
-o PHP chegar.
+---
 
-## Como abrir o projeto
+## Quem fez o quê
 
-1. Baixe ou clone o repositório.
-2. Abra a pasta no VS Code (*Arquivo → Abrir Pasta* — a pasta do projeto
-   inteira, com `frontend/` e `backend/` dentro).
-3. Abra `frontend/index.html` e clique em **Go Live** (extensão Live Server).
+*Uma linha por integrante. É o mapa de quem procurar quando algo quebra — e
+bate com o histórico de commits.*
 
-Como o `index.html` está dentro de `frontend/`, os caminhos dele ficam assim:
-
-| Para chegar em | Escreva no `index.html` |
+| Integrante | Parte da folha de estilo |
 |---|---|
-| a folha de estilos | `css/estilo.css` |
-| o script | `js/script.js` |
-| uma imagem | `img/foto.jpg` |
-| um arquivo do backend | `../backend/processa-contato.php` |
-
-Os dois pontos (`..`) sobem uma pasta: saem do `frontend/` antes de entrar no
-`backend/`.
-
-## Andamento por ciclo
-
-- [x] Ciclo 3 — repositório, equipe e estrutura do projeto
-- [x] Ciclo 3 — `frontend/`: página com listas, tabela e formulário de contato
-- [ ] Ciclos 4 e 5 — `frontend/css/`: identidade visual, layout e responsividade
-- [ ] Ciclos 6 e 7 — `frontend/js/`: interação, validação e dados via JSON
-- [ ] Ciclos 8 a 10 — `backend/`: formulário que grava e lista do banco
+| <Nome 1> | o `:root`, o `box-sizing` e o segundo tema |
+| <Nome 2> | tipografia: web font, escala e entrelinha |
+| <Nome 3> | página e conteúdo |
+| <Nome 4> | cabeçalho e menu |
+| <Nome 5> | tabela |
+| <Nome 6> | formulário e rodapé |
