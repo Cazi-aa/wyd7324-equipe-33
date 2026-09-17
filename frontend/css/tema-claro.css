@@ -1,21 +1,11 @@
 :root {
-  --principal: #0b3d0d;
-  --sobre-principal: #F5F5F5;
-  --fundo: #F4F6F5;
-  --superficie: #FFFFFF;
-  --texto: #1A1A1A;
-  --hover-superficie: #a0a0a0;
-
-  --realce: #1FA83A;
-  --texto-fraco: #4B5563;
-  --linha: #D1D5D3;
-  --cor_link: #168A35;
-
-  --fonte-principal: 'Montserrat', sans-serif;
-  --fonte-secundaria: 'Arial', sans-serif;
-
-  --esp-entre-linhas: 0.5rem;
-  --esp-entorno-frases: 1rem;
-  --esp-conteiner-superior: 1.5rem;
-  --esp-total-comparacao-resto: 1.5rem;
+    --principal: #E10600;
+    --sobre-principal: #FFFFFF;
+    --apoio: #B00000;
+    --fundo: #F4F5F6;
+    --superficie: #FFFFFF;
+    --texto: #16181A;
+    --linha: #D5D8DA;
+    --texto-fraco: #5F656A;
+    --realce: #FF3B30;
 }

@@ -3,7 +3,18 @@
    -------------------------------------------------------------------------- */
    
 
-:root {
+:root {:root {
+    --principal: #E10600;
+    --sobre-principal: #FFFFFF;
+    --apoio: #B00000;
+    --fundo: #0B0D0E;
+    --superficie: #181B1D;
+    --texto: #F5F5F5;
+    --linha: #303438;
+    --texto-fraco: #A8ADB0;
+    --realce: #FF3B30;
+   }
+
   /* Cinco papéis obrigatórios do PDF */
   --principal: #0B3D2E;          /* Racing Green */
   --sobre-principal: #D9DDE0;    /* Texto claro sobre a cor principal */
