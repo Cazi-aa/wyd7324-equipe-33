@@ -25,6 +25,90 @@
   box-sizing: border-box;
 }
 
+/* --- Formulário e Campos --- */
+fieldset {
+  border: 1px solid var(--linha);
+  padding: var(--e-3);
+  margin-bottom: var(--e-3);
+  border-radius: 4px;
+}
+
+legend {
+  color: var(--realce);
+  font-weight: bold;
+  padding: 0 var(--e-1);
+}
+
+label {
+  display: block;
+  margin-top: var(--e-2);
+  margin-bottom: var(--e-1);
+  color: var(--texto);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: var(--e-1) var(--e-2);
+  background-color: var(--fundo);
+  border: 1px solid var(--linha);
+  color: var(--texto);
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Indicador de Foco (:focus) - Exigência do PDF */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--realce);
+  box-shadow: 0 0 5px var(--realce);
+}
+
+/* --- Botões --- */
+button,
+.btn {
+  padding: var(--e-1) var(--e-3);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: var(--e-2);
+}
+
+/* Botão Principal */
+button[type="submit"],
+.btn-principal {
+  background-color: var(--principal);
+  color: var(--sobre-principal);
+}
+
+button[type="submit"]:hover,
+.btn-principal:hover {
+  filter: brightness(1.2);
+}
+
+/* Botão Secundário */
+button[type="reset"],
+.btn-secundario {
+  background-color: transparent;
+  color: var(--texto-fraco);
+  border: 1px solid var(--linha);
+}
+
+button[type="reset"]:hover,
+.btn-secundario:hover {
+  background-color: var(--linha);
+  color: var(--texto);
+}
+
+
 /* --------------------------------------------------------------------------
    6. FORMULÁRIO E RODAPÉ — Estevão Henrique Correa da Silva
    -------------------------------------------------------------------------- */
