@@ -3,7 +3,7 @@
    -------------------------------------------------------------------------- */
    
 
-:root {:root {
+:root {i:root {
     --principal: #E10600;
     --sobre-principal: #FFFFFF;
     --apoio: #B00000;
@@ -197,11 +197,29 @@ button {
    color: var(--texto);
    border-radius: 5px;
    width: 100px;
-   height: 40px;
+   padding: 10px 16px;
    margin: 10px;
 }
+
 button:hover {
    background-color: var(--hover-superficie);
+}
+
+button:focus {
+   outline: none;
+   border: 2px solid var(--realce);
+}
+
+.f1-btn-primary {
+   background-color: var(--realce);
+   color: var(--fundo);
+   border: 1px solid var(--realce);
+}
+
+.f1-btn-secondary {
+   background-color: var(--superficie);
+   color: var(--texto);
+   border: 1px solid var(--linha);
 }
 /* --------------------------------------------------------------------------
    6. O ROOT: (fontes e paleta de cores) — Cauã Zarattini e Estevão Henrique - Fim do Commit
@@ -210,14 +228,14 @@ button:hover {
 /*---------------------------------------------------------------------------
    PARAGRAFO DE IMPACTO NO INICIO - Rafael Pires Rezende
    --------------------------------------------------------------------------*/
-   #Inicio p{
-      max-width: 850px;
-      line-height: 1.6;
-   }
+   #inicio p{
+   max-width: 850px;
+   line-height: 1.6;
+}
 
-   #Incio img{
-      width: 500px; /* Determina o tamanho da imagem */
-   }
+#inicio img{
+   width: 500px;
+}
 
 /* --------------------------------------------------------------------------
    6. FORMULÁRIO E RODAPÉ — Estevão Henrique Correa da Silva
