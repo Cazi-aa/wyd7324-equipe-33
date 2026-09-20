@@ -323,15 +323,109 @@ button:focus {
 /* --------------------------------------------------------------------------
    6. FORMULÁRIO E RODAPÉ — Estevão Henrique Correa da Silva
    -------------------------------------------------------------------------- */
+
+/* --- Formulário e Campos --- */
+fieldset {
+  width: 100%;
+  border: 1px solid var(--linha);
+  padding: var(--esp-conteiner-superior);
+  margin-bottom: var(--esp-conteiner-superior);
+  border-radius: 6px;
+  background-color: var(--superficie);
+}
+
+legend {
+  color: var(--realce);
+  font-weight: bold;
+  padding: 0 var(--esp-entre-linhas);
+}
+
+label {
+  display: block;
+  margin-top: var(--esp-entorno-frases);
+  margin-bottom: var(--esp-entre-linhas);
+  color: var(--texto);
+}
+
+/* Campos de entrada (ocupam 100% de largura) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: var(--esp-entre-linhas) var(--esp-entorno-frases);
+  background-color: var(--fundo);
+  border: 1px solid var(--linha);
+  color: var(--texto);
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Indicador de Foco (:focus) - Exigência do PDF */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--realce);
+  box-shadow: 0 0 5px var(--realce);
+}
+
+/* --- Botões --- */
+button,
+.btn {
+  padding: var(--esp-entre-linhas) var(--esp-conteiner-superior);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: var(--esp-entorno-frases);
+  margin-right: var(--esp-entre-linhas);
+}
+
+/* Botão Principal */
+button[type="submit"],
+.btn-principal {
+  background-color: var(--principal);
+  color: var(--sobre-principal);
+  border: 1px solid var(--realce);
+}
+
+button[type="submit"]:hover,
+.btn-principal:hover {
+  filter: brightness(1.2);
+}
+
+/* Botão Secundário */
+button[type="reset"],
+.btn-secundario {
+  background-color: transparent;
+  color: var(--texto-fraco);
+  border: 1px solid var(--linha);
+}
+
+button[type="reset"]:hover,
+.btn-secundario:hover {
+  background-color: var(--linha);
+  color: var(--texto);
+}
+
+/* --- Rodapé --- */
 .f1-footer {
   background-color: var(--superficie);
   color: var(--texto);
-  border-top: 3px solid var(--realce); /* Linha de destaque no topo do rodapé(fininha verde da parte de cima) */
+  border-top: 3px solid var(--realce);
   padding-top: var(--esp-conteiner-superior);
   margin-top: var(--esp-total-comparacao-resto);
-  width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+  width: 100%;
 }
-/* mantém o conteúdo do rodapé centralizado, e com as listas separadas, toda nova lista entra com essas regras */
+
 .f1-footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -343,9 +437,9 @@ button:focus {
 }
 
 .f1-footer-block {
-  flex: 1 1 250px; /* Permite o rodape se adequar a qualquer tamanho de tela */
+  flex: 1 1 250px;
 }
-/* define o estilo para os títulos dentro de cada bloco do rodapé, como o nome  do site*/
+
 .f1-footer-block h3,
 .f1-footer-block h4 {
   color: var(--texto);
@@ -353,26 +447,26 @@ button:focus {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* define o estilo para os parágrafos dentro de cada bloco do rodapé */
+
 .f1-footer-block p { 
   color: var(--texto-fraco);
   font-size: 0.9rem;
   line-height: 1.0;
   margin-bottom: var(--esp-entre-linhas);
 }
-/* define o estilo para as listas dentro de cada bloco do rodapé, os nomes por exemplo */
+
 .f1-footer-block ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* define o estilo para os itens de lista dentro de cada bloco do rodapé */
+
 .f1-footer-block li {
   color: var(--texto-fraco);
   font-size: 0.9rem;
   margin-bottom: var(--esp-entre-linhas);
 }
-/* define o estilo para a parte inferior do rodapé, os direitos autorais */
+
 .f1-footer-bottom {
   background-color: var(--fundo);
   text-align: center;
