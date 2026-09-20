@@ -7,67 +7,135 @@
     <title>Informativo F1 - Equipe 33</title>
 
     <!--
-      O CSS ainda está vazio: ele começa a ser escrito na aula 04.
-      A ligação já fica pronta aqui para ninguém ter de lembrar depois.
+      A ligação com o CSS já está pronta para o desenvolvimento do projeto.
     -->
     <link rel="stylesheet" href="css/estilo.css">
+    <!-- <link rel="stylesheet" href="css/tema-claro.css"> -->
   </head>
 
   <body>
 
     <header>
-      <h1>Informativo F1</h1>
+      <h1>Car Showroom #33</h1>
       <p>Projeto da equipe 33 — WYD7324</p>
     </header>
 
     <nav>
       <ul>
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#inicio">Início</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
 
     <main>
       <section id="sobre">
-        <h2>Sobre o projeto</h2>
-        <p>
-          Este projeto é um site informativo sobre Fórmula 1, feito como trabalho da disciplina WYD7324.
-          A estrutura do projeto: este arquivo é a raiz do <code>frontend/</code>, com
-          <code>css/</code>, <code>js/</code> e <code>img/</code> ao lado dele.
-          Todo PHP mora no <code>backend/</code>, um nível acima.
-        </p>
-        <ul>Objetivos do projeto:
+        <div>
+          <h2>Sobre o projeto</h2>
+          <p>
+            Este projeto é um site informativo sobre Fórmula 1, feito como trabalho da disciplina WYD7324.
+            A estrutura do projeto: este arquivo é a raiz do <code>frontend/</code>, com
+            <code>css/</code>, <code>js/</code> e <code>img/</code> ao lado dele.
+            Todo PHP mora no <code>backend/</code>, um nível acima.
+          </p>
+        </div>
+
+        <ul>
+          Objetivos do projeto:
           <li>Desenvolver um site com informações úteis sobre Fórmula 1</li>
           <li>Disponibilizar jogos interativos e informativos de forma gratuita</li>
           <li>Permitir envio de emails com feedbacks, sugestões e dúvidas</li>
         </ul>
+
+        <section id="inicio">
+          <h2>Venha fazer parte da nossa história</h2>
+
+          <p>
+            Acreditamos que cada carro pode marcar o início de uma nova história.
+            Por isso, reunimos <strong>qualidade</strong>, <strong>confiança</strong> e <strong>variedade</strong>
+            para ajudar você a encontrar o carro que combina com seu estilo e seus sonhos.
+            <strong>Escolha o seu e comece uma nova jornada conosco!</strong>
+          </p>
+
+          <img src="img/familia.jpg" alt="familia olhando carro">
+        </section>
+
+        <section id="tabela">
+          <h2>Tabela (por enquanto neutra)</h2>
+
+          <table>
+            <caption>Informações da Tabela</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Informação</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Item 1</td>
+                <td>Categoria 1</td>
+                <td>Informação 1</td>
+              </tr>
+
+              <tr>
+                <td>Item 2</td>
+                <td>Categoria 2</td>
+                <td>Informação 2</td>
+              </tr>
+
+              <tr>
+                <td>Item 3</td>
+                <td>Categoria 3</td>
+                <td>Informação 3</td>
+              </tr>
+
+              <tr>
+                <td>Item 4</td>
+                <td>Categoria 4</td>
+                <td>Informação 4</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <h2>A Equipe 33</h2>
+
         <table>
           <tbody>
             <tr>
               <th scope="col">Nome</th>
               <th scope="col">Papel</th>
             </tr>
+
             <tr>
               <td>Cauã Zarattini Almeida</td>
               <td><strong>Líder</strong></td>
             </tr>
+
             <tr>
               <td>Estevão Henrique Correa Da Silva</td>
               <td>Integrante</td>
             </tr>
+
             <tr>
               <td>Filipe Gabriel Carneiro Hott</td>
               <td>Integrante</td>
             </tr>
+
             <tr>
               <td>Juan Vazquez Nascimento Silva</td>
               <td>Integrante</td>
             </tr>
+
             <tr>
               <td>Rafael Pires Rezende</td>
               <td>Integrante</td>
             </tr>
+
             <tr>
               <td>Victor Henrique Rocha de Oliveira</td>
               <td>Integrante</td>
@@ -77,31 +145,68 @@
       </section>
 
       <section id="contato">
-        <h2>Fale Conosco</h2>
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Seus dados</legend>
-            <div>
-              <label for="nome">Nome</label>
-              <input type="text" id="nome" name="nome" required>
+        <div class="div-form-container">
+
+          <div class="div-form-box1">
+            <h1>Informações de Contato</h1>
+
+            <div class="contact-container">
+              <div>
+                <h3>Coordenador</h3>
+                <h4>Email</h4>
+                <p>csr33coord@gmail.com</p>
+                <h4>Telefone</h4>
+                <p>(31) 91234-5678</p>
+              </div>
+
+              <div>
+                <h3>Gerente</h3>
+                <h4>Email</h4>
+                <p>csr33gerente@gmail.com</p>
+                <h4>Telefone</h4>
+                <p>(31) 98765-4321</p>
+              </div>
             </div>
-            <div>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-              <label for="assunto">Assunto</label>
-              <select id="assunto" name="assunto">
-                <option value="" disabled selected hidden>Escolher</option>
-                <option value="sugestao">Sugestão</option>
-                <option value="duvida">Dúvida</option>
-                <option value="elogio">Elogio</option>
-              </select>
-            </div>
-            
-          </fieldset>
-          <button type="submit">Enviar</button>
-        </form>
+          </div>
+
+          <div class="div-form-box2">
+            <form action="#" method="post">
+              <fieldset>
+                <legend>Seus dados</legend>
+
+                <div class="div-form-content">
+                  <label for="nome">Nome</label>
+                  <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="div-form-content">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="div-form-content">
+                  <label for="assunto">Assunto</label>
+                  <select id="assunto" name="assunto" required>
+                    <option value="" disabled selected hidden>Escolher</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="elogio">Elogio</option>
+                  </select>
+                </div>
+
+                <div class="div-form-content">
+                  <label for="mensagem">Mensagem:</label>
+                  <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                </div>
+              </fieldset>
+
+              <div class="f1-form-buttons">
+                <button type="submit" class="f1-btn-primary">Enviar</button>
+                <button type="reset" class="f1-btn-secondary">Limpar</button>
+              </div>
+            </form>
+          </div>
+        </div>
 
         <!--
           No ciclo 8, o action deste formulário aponta para o backend:
@@ -112,44 +217,45 @@
       </section>
     </main>
 
-  <footer class="f1-footer">
-  <div class="f1-footer-content">
-    
-    <!--primeiro bloco, aqui muda o titulo, o nome da materia e o nome da faculdade -->
-    <div class="f1-footer-block">
-    <h3>Car Showroom #33</h3>
-      <p>Desenvolvimento Web em HTML5, CSS e JavaScript.</p>
-      <p>Centro Universitário Newton Paiva.</p>
-    </div>
+    <footer class="f1-footer">
+      <div class="f1-footer-content">
 
-    <!--bloco 2, aqui muda o nome dos integrantes e da equipe; nome equipe, integrantes.-->
-    <div class="f1-footer-block">
-      <h4>Equipe 33</h4>
-      <ul>
-        <li>Estevão Henrique Correa da Silva</li>
-        <li>Cauã Zarattini Almeida</li>
-        <li>Filipe Gabriel Carneiro Hott</li>
-        <li>Juan Vazquez Nascimento Silva</li>
-        <li>Rafael Pires Rezende</li>
-        <li>Victor Henrique Rocha de Oliveira</li>
-      </ul>
-    </div>
+        <!-- primeiro bloco, aqui muda o titulo, o nome da materia e o nome da faculdade -->
+        <div class="f1-footer-block">
+          <h3>Car Showroom #33</h3>
+          <p>Desenvolvimento Web em HTML5, CSS e JavaScript.</p>
+          <p>Centro Universitário Newton Paiva.</p>
+        </div>
 
-    <!--bloco 3, localização da faculdade -->
-    <div class="f1-footer-block">
-      <h4>Localização</h4>
-      <p>Campus Carlos Luz</p>
-      <p>Av. Presidente Carlos Luz, 220 &ndash; Caiçaras</p>
-      <p>Belo Horizonte &ndash; MG, 31230-010</p>
-    </div>
+        <!-- bloco 2, aqui muda o nome dos integrantes e da equipe -->
+        <div class="f1-footer-block">
+          <h4>Equipe 33</h4>
 
-  </div>
+          <ul>
+            <li>Estevão Henrique Correa da Silva</li>
+            <li>Cauã Zarattini Almeida</li>
+            <li>Filipe Gabriel Carneiro Hott</li>
+            <li>Juan Vazquez Nascimento Silva</li>
+            <li>Rafael Pires Rezende</li>
+            <li>Victor Henrique Rocha de Oliveira</li>
+          </ul>
+        </div>
 
-  <!--muda a faixa de direitos autorais, detalhe que deixa mais profisional-->
-  <div class="f1-footer-bottom">
-    <p>&copy; 2026 Equipe 33 &bull; Disciplina WYD7324 &bull; Todos os direitos reservados.</p>
-  </div>
-  </footer>
+        <!-- bloco 3, localização da faculdade -->
+        <div class="f1-footer-block">
+          <h4>Localização</h4>
+          <p>Campus Carlos Luz</p>
+          <p>Av. Presidente Carlos Luz, 220 &ndash; Caiçaras</p>
+          <p>Belo Horizonte &ndash; MG, 31230-010</p>
+        </div>
+
+      </div>
+
+      <!-- muda a faixa de direitos autorais -->
+      <div class="f1-footer-bottom">
+        <p>&copy; 2026 Equipe 33 &bull; Disciplina WYD7324 &bull; Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
     <!--
       O JavaScript também está vazio por enquanto — ele entra no ciclo 6.
