@@ -478,3 +478,192 @@ button[type="reset"]:hover,
 /* --------------------------------------------------------------------------
    6. FORMULÁRIO E RODAPÉ — Estevão Henrique Correa da Silva - Fim do Commit
    -------------------------------------------------------------------------- */
+
+
+   /* --------------------------------------------------------------------------
+   TIPOGRAFIA, WEBFONT, ESCALA E LARGURA DA PÁGINA — Filipe Gabriel
+   -------------------------------------------------------------------------- */
+
+/* --- Webfonts --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap');
+
+
+/* --- Variáveis de tipografia e espaçamento --- */
+
+:root {
+
+    /* Tipografia */
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-titulo: 'Rajdhani', sans-serif;
+
+    /* Escala tipográfica em rem */
+    --fonte-base: 1rem;          /* 16px */
+    --fonte-pequena: 0.875rem;  /* 14px */
+    --fonte-h1: 2.5rem;          /* 40px */
+    --fonte-h2: 2rem;            /* 32px */
+    --fonte-h3: 1.5rem;          /* 24px */
+    --fonte-h4: 1.125rem;        /* 18px */
+
+    /* Escala de espaçamento em rem */
+    --esp-1: 0.5rem;             /* 8px */
+    --esp-2: 1rem;               /* 16px */
+    --esp-3: 1.5rem;             /* 24px */
+    --esp-4: 2rem;               /* 32px */
+    --esp-5: 3rem;               /* 48px */
+    --esp-6: 4rem;               /* 64px */
+
+    /* Largura da página */
+    --largura-conteudo: 75rem;   /* 1200px */
+    --largura-texto: 53rem;      /* 848px */
+}
+
+
+/* --- Configuração global da tipografia --- */
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-base);
+    line-height: 1.6;
+}
+
+
+/* --- Hierarquia dos títulos --- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--fonte-h1);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--fonte-h2);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--fonte-h3);
+    font-weight: 600;
+}
+
+h4 {
+    font-size: var(--fonte-h4);
+    font-weight: 600;
+}
+
+p,
+li {
+    font-size: var(--fonte-base);
+}
+
+small {
+    font-size: var(--fonte-pequena);
+}
+
+
+/* --- Largura e centralização do conteúdo principal --- */
+
+main {
+    width: min(90%, var(--largura-conteudo));
+    margin: 0 auto;
+}
+
+
+/* --- Limitação da largura dos textos --- */
+
+#inicio p {
+    max-width: var(--largura-texto);
+}
+
+
+/* --- Imagens responsivas --- */
+
+#inicio img {
+    display: block;
+    width: min(100%, 50rem);
+    height: auto;
+}
+
+
+/* --- Tabelas ocupando a largura disponível --- */
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    padding: var(--esp-1) var(--esp-2);
+}
+
+
+/* --- Navegação --- */
+
+nav {
+    width: min(90%, var(--largura-conteudo));
+    margin: 0 auto var(--esp-4);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--esp-4);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+nav a {
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-pequena);
+    font-weight: 600;
+}
+
+
+/* --- Responsividade da tipografia e largura --- */
+
+@media (max-width: 48rem) {
+
+    :root {
+        --fonte-h1: 2rem;       /* 32px */
+        --fonte-h2: 1.75rem;    /* 28px */
+        --fonte-h3: 1.35rem;    /* aproximadamente 22px */
+        --fonte-h4: 1rem;       /* 16px */
+    }
+
+    main {
+        width: 92%;
+    }
+
+    nav {
+        width: 92%;
+    }
+
+    nav ul {
+        gap: var(--esp-2);
+    }
+
+    #inicio img {
+        width: 100%;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   FIM — TIPOGRAFIA, WEBFONT, ESCALA E LARGURA — Filipe Gabriel
+   -------------------------------------------------------------------------- */
