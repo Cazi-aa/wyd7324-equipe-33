@@ -7,3 +7,17 @@
    arquivos de dentro do backend/ vão incluir. Nada de HTML aqui: o backend
    recebe, valida e grava; quem desenha a tela é o frontend.
    =========================================================================== */
+$servidor = "localhost";
+$banco = "car_showroom";
+$usuario = "root";
+$senha = "";
+
+$conexao = new PDO(
+    "mysql:host=$servidor;dbname=$banco;charset=utf8mb4",
+    $usuario,
+    $senha,
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]
+);

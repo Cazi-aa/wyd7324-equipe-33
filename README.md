@@ -106,3 +106,25 @@ bate com o histórico de commits.*
 | <Nome 4> | cabeçalho e menu |
 | <Nome 5> | tabela |
 | <Nome 6> | formulário e rodapé |
+
+## Como executar o formulário (PHP + MySQL)
+
+O formulário envia os campos por `POST` para `backend/processa-contato.php`.
+O JavaScript faz as validações no navegador e o PHP valida novamente antes de
+gravar a mensagem com PDO e parâmetros preparados.
+
+1. Coloque a pasta do projeto dentro de `C:\\xampp\\htdocs` (por exemplo,
+   `C:\\xampp\\htdocs\\wyd7324-equipe-33`).
+2. No painel do XAMPP, inicie **Apache** e **MySQL**.
+3. Abra `http://localhost/phpmyadmin`, entre na aba **SQL** e execute o conteúdo
+   de `backend/sql/banco.sql`. Isso cria o banco `car_showroom` e a tabela
+   `mensagens`.
+4. Confira as credenciais em `backend/config/conexao.php`. O padrão do XAMPP
+   usado neste projeto é `root` sem senha.
+5. Acesse `http://localhost/wyd7324-equipe-33/frontend/` (ajuste o nome da URL
+   se você renomear a pasta) e envie uma mensagem.
+
+As mensagens gravadas podem ser conferidas no phpMyAdmin em
+`car_showroom` → `mensagens` → **Visualizar**. O formulário não funciona pelo
+Live Server nem abrindo o HTML com dois cliques: o PHP precisa ser executado
+pelo Apache. Não publique as credenciais locais do XAMPP em um servidor real.
