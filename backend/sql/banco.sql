@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS mensagens (
     assunto VARCHAR(20) NOT NULL,
     mensagem TEXT NOT NULL,
     criada_em DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 CREATE TABLE IF NOT EXISTS veiculos (
 
