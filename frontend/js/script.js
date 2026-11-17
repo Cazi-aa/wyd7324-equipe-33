@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   formulario.insertBefore(aviso, formulario.querySelector(".f1-form-buttons"));
 
   const contador = document.getElementById("contador-mensagem");
-  const temNumero = (texto) => /d/.test(texto);
+  const temNumero = (texto) => /\d/.test(texto);
 
   campoMensagem.addEventListener("input", () => {
     if (contador) contador.textContent = `${campoMensagem.value.length}/500 caracteres`;
