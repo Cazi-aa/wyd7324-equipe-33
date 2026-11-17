@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS mensagens (
     assunto VARCHAR(20) NOT NULL,
     mensagem TEXT NOT NULL,
     criada_em DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
+)
 
 CREATE TABLE IF NOT EXISTS veiculos (
 
@@ -25,5 +25,8 @@ CREATE TABLE IF NOT EXISTS veiculos (
     capacidade INT NOT NULL,
     combustivel VARCHAR(50) NOT NULL,
     cor VARCHAR(30) NOT NULL,
+    preco DOUBLE(12,2) NOT NULL,
+    ano INT NOT NULL,
+    modelo VARCHAR(100) NOT NULL
     CONSTRAINT id_carro PRIMARY KEY (id_cadastro)
-)
+);
