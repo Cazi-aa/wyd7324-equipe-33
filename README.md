@@ -100,12 +100,13 @@ bate com o histórico de commits.*
 
 | Integrante | Parte da folha de estilo |
 |---|---|
-| <Nome 1> | o `:root`, o `box-sizing` e o segundo tema |
-| <Nome 2> | tipografia: web font, escala e entrelinha |
-| <Nome 3> | página e conteúdo |
-| <Nome 4> | cabeçalho e menu |
-| <Nome 5> | tabela |
-| <Nome 6> | formulário e rodapé |
+| <Estevão/Cauã> | o `:root`, o `box-sizing` e o segundo tema |
+| <Victor Oliveira> | javascript para validar o formulario|
+| <Cauã> | Php e conexão com  banco de dados | 
+| <Cauã> | cabeçalho e menu |
+| <Rafael> | tabela e estilização |
+| <Juan/Estevão> | formulário e rodapé |
+| <Filipe> | Alinhamento e tipografia |
 
 ## Como executar o formulário (PHP + MySQL)
 

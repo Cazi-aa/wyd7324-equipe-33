@@ -54,11 +54,10 @@ if ($erros) {
         $numero = $conexao->lastInsertId();
         $titulo = "Mensagem recebida";
     } catch (PDOException $erro) {
-        error_log($erro->getMessage());
-        http_response_code(500);
-        $titulo = "Não foi possível enviar";
-        $erros[] = "Ocorreu um problema ao salvar sua mensagem. Confira se o banco de dados foi criado e tente novamente.";
-    }
+    http_response_code(500);
+    $titulo = "Erro no banco de dados";
+    $erros[] = $erro->getMessage();
+}
 }
 
 $nomeSeguro = htmlspecialchars($nome, ENT_QUOTES, "UTF-8");

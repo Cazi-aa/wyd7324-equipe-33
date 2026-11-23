@@ -1,10 +1,12 @@
 CREATE DATABASE IF NOT EXISTS car_showroom
+
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
 USE car_showroom;
 
 CREATE TABLE IF NOT EXISTS mensagens (
+
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(60) NOT NULL,
     email VARCHAR(120) NOT NULL,

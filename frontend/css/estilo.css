@@ -3,17 +3,7 @@
    -------------------------------------------------------------------------- */
    
 
-:root {i:root {
-    --principal: #E10600;
-    --sobre-principal: #FFFFFF;
-    --apoio: #B00000;
-    --fundo: #0B0D0E;
-    --superficie: #181B1D;
-    --texto: #F5F5F5;
-    --linha: #303438;
-    --texto-fraco: #A8ADB0;
-    --realce: #FF3B30;
-   }
+:root {
 
   /* Cinco papéis obrigatórios do PDF */
   --principal: #0B3D2E;          /* Racing Green */
@@ -42,6 +32,23 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+.carrossel img {
+  max-width: 1200px ;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2.5rem;
+}
+
+.carrossel h2 {
+  max-width: 1100px;
+}
+
+.carrossel h1 {
+   max-width: 1100px;
+   color: var(--realce);
 }
 
 /* --- Formulário e Campos --- */

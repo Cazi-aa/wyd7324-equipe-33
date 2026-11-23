@@ -1,11 +1,21 @@
 :root {
-    --principal: #E10600;
-    --sobre-principal: #FFFFFF;
-    --apoio: #B00000;
-    --fundo: #F4F5F6;
-    --superficie: #FFFFFF;
-    --texto: #16181A;
-    --linha: #D5D8DA;
-    --texto-fraco: #5F656A;
-    --realce: #FF3B30;
+  /* Cinco papéis obrigatórios do PDF */
+
+  --principal: #0B3D2E;
+  --sobre-principal: #D9DDE0;
+  --fundo: #F4F7F4;
+  --superficie: #FFFFFF;
+  --texto: #17211C;
+  --hover-superficie: #E7EEE9;
+
+  /* Cores de apoio e detalhes */
+
+  --realce: #176B2C;
+  --texto-fraco: #52615A;
+  --linha: #77877D;
+  --cor_link: #0B5F3B;
+
+  /*Fontes*/
+   --fonte-principal: 'Montserrat', sans-serif;  /*Fonte principal, títulos, subtítulos e parágrafos*/
+   --fonte-secundaria: 'Arial', sans-serif;      /*Fonte secundária, inputs*/
 }
