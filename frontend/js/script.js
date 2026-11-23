@@ -12,7 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
   formulario.insertBefore(aviso, formulario.querySelector(".f1-form-buttons"));
 
   const contador = document.getElementById("contador-mensagem");
-  const temNumero = (texto) => /\\d/.test(texto);
+  const temNumero = (texto) => /\d/.test(texto);
+  const minimoPorAssunto = {
+  sugestao: 20,
+  duvida: 15,
+  elogio: 10,
+};
+
 
   campoMensagem.addEventListener("input", () => {
     if (contador) contador.textContent = `${campoMensagem.value.length}/500 caracteres`;
@@ -31,9 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
       evento.preventDefault();
       aviso.textContent = "O nome não pode conter números.";
       campoNome.focus();
-    } else if (campoAssunto.value === "trabalho" && mensagem.length < 20) {
+    } else if (mensagem.length < minimoPorAssunto[campoAssunto.value]) {
       evento.preventDefault();
-      aviso.textContent = "Conte mais sobre a proposta (mínimo de 20 caracteres).";
+      aviso.textContent = `Escreva pelo menos ${minimoPorAssunto[campoAssunto.value]} caracteres na mensagem.`;
       campoMensagem.focus();
     } else {
       aviso.textContent = "Tudo certo! Enviando mensagem…";
@@ -45,3 +51,92 @@ document.addEventListener("DOMContentLoaded", () => {
     if (contador) contador.textContent = "0/500 caracteres";
   });
 });
+
+let idAtual = 1;
+
+function carregarVeiculo() {
+
+    fetch(`../backend/exibir-especificacoes.php?id=${idAtual}`)
+        .then(resposta => {
+            if (!resposta.ok) {
+                throw new Error("Erro ao buscar veículo");
+            }
+
+            return resposta.json();
+        })
+        .then(veiculo => {
+
+            // Preenche o preço no h1
+            document.getElementById("preco-veiculo").textContent =
+                Number(veiculo.preco).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL"
+                });
+
+            // Preenche o modelo e o ano no h2
+            document.getElementById("modelo-ano").textContent =
+                `${veiculo.modelo_ano}`;
+
+            const tabela = document.getElementById("especificacoes-corpo");
+
+            tabela.innerHTML = "";
+
+            const linha = document.createElement("tr");
+
+            const dados = [
+                veiculo.motor,
+                veiculo.cambio,
+                veiculo.quilometragem,
+                veiculo.donos_ant,
+                veiculo.capacidade,
+                veiculo.combustivel,
+                veiculo.cor
+            ];
+
+            dados.forEach(dado => {
+
+                const celula = document.createElement("td");
+
+                celula.textContent = dado ?? "";
+
+                linha.appendChild(celula);
+            });
+
+            tabela.appendChild(linha);
+        })
+        .catch(erro => {
+            console.error("Erro:", erro);
+        });
+}
+
+function mudarImagem(idAtual) {
+    console.log("ID recebido:", idAtual);
+
+    const imagem = document.getElementById("imagem-veiculo");
+    imagem.src = `img/veiculo-${idAtual}.png`;
+}
+
+// Butões de navegação
+document.getElementById("proximo").addEventListener("click", () => {
+
+    idAtual++;
+
+    if (idAtual > 3) {
+        idAtual = 1;
+    }
+    mudarImagem(idAtual);
+    carregarVeiculo();
+});
+
+document.getElementById("anterior").addEventListener("click", () => {
+
+    idAtual--;
+
+    if (idAtual < 1) {
+        idAtual = 3;
+    }
+    mudarImagem(idAtual);
+    carregarVeiculo();
+});
+
+carregarVeiculo();
